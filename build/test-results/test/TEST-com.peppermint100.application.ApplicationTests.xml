@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.peppermint100.application.ApplicationTests" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-03-28T06:27:16" hostname="DESKTOP-FMEROQG" time="0.495">
+  <properties/>
+  <testcase name="left_join_on()" classname="com.peppermint100.application.ApplicationTests" time="0.367"/>
+  <testcase name="sub_query()" classname="com.peppermint100.application.ApplicationTests" time="0.02"/>
+  <testcase name="is_there_10_characters()" classname="com.peppermint100.application.ApplicationTests" time="0.013"/>
+  <testcase name="users_level_under_10()" classname="com.peppermint100.application.ApplicationTests" time="0.011"/>
+  <testcase name="inner_join()" classname="com.peppermint100.application.ApplicationTests" time="0.016"/>
+  <testcase name="dynamic_query()" classname="com.peppermint100.application.ApplicationTests" time="0.015"/>
+  <testcase name="single_row()" classname="com.peppermint100.application.ApplicationTests" time="0.028"/>
+  <testcase name="highest_level_user()" classname="com.peppermint100.application.ApplicationTests" time="0.012"/>
+  <testcase name="paging_with_fetch_results()" classname="com.peppermint100.application.ApplicationTests" time="0.01"/>
+  <system-out><![CDATA[15:27:12.502 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:27:12.519 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:27:12.548 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.peppermint100.application.ApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:27:12.564 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.peppermint100.application.ApplicationTests], using SpringBootContextLoader
+15:27:12.568 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.peppermint100.application.ApplicationTests]: class path resource [com/peppermint100/application/ApplicationTests-context.xml] does not exist
+15:27:12.569 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.peppermint100.application.ApplicationTests]: class path resource [com/peppermint100/application/ApplicationTestsContext.groovy] does not exist
+15:27:12.569 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.peppermint100.application.ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:27:12.607 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.peppermint100.application.ApplicationTests]
+15:27:12.727 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.peppermint100.application.ApplicationTests]: using defaults.
+15:27:12.727 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+15:27:12.735 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+15:27:12.742 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@46441c6c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@30586a75, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3ab7dd14, org.springframework.test.context.support.DirtiesContextTestExecutionListener@60f668c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@604ead5d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@133668e3, org.springframework.test.context.event.EventPublishingTestExecutionListener@176d48ec, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6aab778b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7f9a0bc6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5f4b15a6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@221c1c8b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@13ba206c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3c51cde6]
+15:27:12.747 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@1f7cdd1 testClass = ApplicationTests, testInstance = com.peppermint100.application.ApplicationTests@4bf11a9c, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@3e757688 testClass = ApplicationTests, locations = '{}', classes = '{class com.peppermint100.application.Application, class com.peppermint100.application.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@237e1319, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5e5a4d7, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a67d776, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@589e0ea4, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@60165474], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+15:27:12.770 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.5.RELEASE)
+
+2021-03-28 15:27:13.026  INFO 8348 --- [    Test worker] c.p.application.ApplicationTests         : Starting ApplicationTests on DESKTOP-FMEROQG with PID 8348 (started by ltgya in C:\Users\ltgya\Desktop\advanced_querydsl)
+2021-03-28 15:27:13.027  INFO 8348 --- [    Test worker] c.p.application.ApplicationTests         : No active profile set, falling back to default profiles: default
+2021-03-28 15:27:13.453  INFO 8348 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-28 15:27:13.454  INFO 8348 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-03-28 15:27:13.497  INFO 8348 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.peppermint100.application.repository.BattleClassRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-03-28 15:27:13.500  INFO 8348 --- [    Test worker] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.peppermint100.application.repository.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-03-28 15:27:13.500  INFO 8348 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 JDBC repository interfaces.
+2021-03-28 15:27:13.515  INFO 8348 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-03-28 15:27:13.516  INFO 8348 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-03-28 15:27:13.552  INFO 8348 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 2 JPA repository interfaces.
+2021-03-28 15:27:14.018  INFO 8348 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-28 15:27:14.081  INFO 8348 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-28 15:27:14.146  INFO 8348 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2021-03-28 15:27:14.288  INFO 8348 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-28 15:27:14.354  INFO 8348 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-03-28 15:27:14.387 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@1c8509f3
+2021-03-28 15:27:14.388 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@1c8509f3
+2021-03-28 15:27:14.388 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@1c8509f3
+2021-03-28 15:27:14.388 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@4d58e31e
+2021-03-28 15:27:14.389 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@2f3e145d
+2021-03-28 15:27:14.390 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@61eb377f
+2021-03-28 15:27:14.391 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@2223941f
+2021-03-28 15:27:14.391 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@2223941f
+2021-03-28 15:27:14.391 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@2223941f
+2021-03-28 15:27:14.392 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@2b092b56
+2021-03-28 15:27:14.392 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@2b092b56
+2021-03-28 15:27:14.393 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@2b092b56
+2021-03-28 15:27:14.394 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@3a35076d
+2021-03-28 15:27:14.394 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@3a35076d
+2021-03-28 15:27:14.394 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@3a35076d
+2021-03-28 15:27:14.395 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@753890a7
+2021-03-28 15:27:14.396 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@753890a7
+2021-03-28 15:27:14.396 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@753890a7
+2021-03-28 15:27:14.397 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@257f17d7
+2021-03-28 15:27:14.397 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@257f17d7
+2021-03-28 15:27:14.398 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@257f17d7
+2021-03-28 15:27:14.399 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@10244c86
+2021-03-28 15:27:14.399 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@10244c86
+2021-03-28 15:27:14.399 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@10244c86
+2021-03-28 15:27:14.401 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@18627b4b
+2021-03-28 15:27:14.401 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@18627b4b
+2021-03-28 15:27:14.401 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@18627b4b
+2021-03-28 15:27:14.402 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@45a0cc1b
+2021-03-28 15:27:14.402 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@45a0cc1b
+2021-03-28 15:27:14.403 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@8291124
+2021-03-28 15:27:14.404 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@8291124
+2021-03-28 15:27:14.405 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@39ba78b4
+2021-03-28 15:27:14.405 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@39ba78b4
+2021-03-28 15:27:14.405 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@4c83302d
+2021-03-28 15:27:14.406 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@3eaa7ec0
+2021-03-28 15:27:14.408 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@66cb5039
+2021-03-28 15:27:14.408 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@66cb5039
+2021-03-28 15:27:14.410 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.DurationType@5d92cf28
+2021-03-28 15:27:14.410 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.DurationType@5d92cf28
+2021-03-28 15:27:14.411 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration Instant -> org.hibernate.type.InstantType@13bf08b0
+2021-03-28 15:27:14.411 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.InstantType@13bf08b0
+2021-03-28 15:27:14.413 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@22030d5
+2021-03-28 15:27:14.413 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@22030d5
+2021-03-28 15:27:14.414 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.LocalDateType@40234e4e
+2021-03-28 15:27:14.414 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@40234e4e
+2021-03-28 15:27:14.415 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@21770f00
+2021-03-28 15:27:14.415 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@21770f00
+2021-03-28 15:27:14.417 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@17f46696
+2021-03-28 15:27:14.417 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@17f46696
+2021-03-28 15:27:14.418 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@46b62ef5
+2021-03-28 15:27:14.418 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@46b62ef5
+2021-03-28 15:27:14.420 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@66a6076b
+2021-03-28 15:27:14.420 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@66a6076b
+2021-03-28 15:27:14.421 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@68ed6217
+2021-03-28 15:27:14.421 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@68ed6217
+2021-03-28 15:27:14.422 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@3b492d78
+2021-03-28 15:27:14.423 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@3b492d78
+2021-03-28 15:27:14.424 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@7ca50bd2
+2021-03-28 15:27:14.424 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@7ca50bd2
+2021-03-28 15:27:14.424 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@7ca50bd2
+2021-03-28 15:27:14.425 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@413ce0fe
+2021-03-28 15:27:14.426 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@53272eb3
+2021-03-28 15:27:14.427 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@53272eb3
+2021-03-28 15:27:14.427 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@53272eb3
+2021-03-28 15:27:14.427 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@45fc147c
+2021-03-28 15:27:14.429 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@5d6fd1bf
+2021-03-28 15:27:14.430 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@7c7309ac
+2021-03-28 15:27:14.430 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@7c7309ac
+2021-03-28 15:27:14.431 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@e83b78
+2021-03-28 15:27:14.432 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@e83b78
+2021-03-28 15:27:14.433 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@20442c3e
+2021-03-28 15:27:14.433 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@20442c3e
+2021-03-28 15:27:14.434 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@1f5219bb
+2021-03-28 15:27:14.434 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@1f5219bb
+2021-03-28 15:27:14.435 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@423e3c2
+2021-03-28 15:27:14.435 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@423e3c2
+2021-03-28 15:27:14.435 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@71f816a7
+2021-03-28 15:27:14.436 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@7af64031
+2021-03-28 15:27:14.437 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@7af64031
+2021-03-28 15:27:14.437 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@7af64031
+2021-03-28 15:27:14.438 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@543cb5b6
+2021-03-28 15:27:14.438 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@543cb5b6
+2021-03-28 15:27:14.438 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@543cb5b6
+2021-03-28 15:27:14.439 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@1dd6fd2c
+2021-03-28 15:27:14.440 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@2fbabd2d
+2021-03-28 15:27:14.441 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@33495a8a
+2021-03-28 15:27:14.441 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@33495a8a
+2021-03-28 15:27:14.441 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@33495a8a
+2021-03-28 15:27:14.443 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@768c2ba0
+2021-03-28 15:27:14.443 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@768c2ba0
+2021-03-28 15:27:14.443 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@768c2ba0
+2021-03-28 15:27:14.443 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@22201ba6
+2021-03-28 15:27:14.444 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@410503b3
+2021-03-28 15:27:14.446 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@6dd58eb
+2021-03-28 15:27:14.446 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@6dd58eb
+2021-03-28 15:27:14.446 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@3f6dc08f
+2021-03-28 15:27:14.448 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@5ac5eca0
+2021-03-28 15:27:14.448 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@5ac5eca0
+2021-03-28 15:27:14.449 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@3014e2e0
+2021-03-28 15:27:14.450 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@3014e2e0
+2021-03-28 15:27:14.450 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@29a53d24
+2021-03-28 15:27:14.451 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@74346c2
+2021-03-28 15:27:14.452 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@2b027d50
+2021-03-28 15:27:14.455 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@6b625330
+2021-03-28 15:27:14.455 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@6b625330
+2021-03-28 15:27:14.456 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@6605a87c
+2021-03-28 15:27:14.456 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@143a7861
+2021-03-28 15:27:14.456 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@34af13e1
+2021-03-28 15:27:14.456 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@1790f260
+2021-03-28 15:27:14.456 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@5c9dfea6
+2021-03-28 15:27:14.456 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@1ba37c24
+2021-03-28 15:27:14.456 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@575f44aa
+2021-03-28 15:27:14.456 DEBUG 8348 --- [         task-1] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@47ccbfd3
+2021-03-28 15:27:14.645  INFO 8348 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-28 15:27:14.684  INFO 8348 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-03-28 15:27:14.749  INFO 8348 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-03-28 15:27:14.766 DEBUG 8348 --- [         task-1] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@3007840a] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@4a2e46a]
+2021-03-28 15:27:15.058 DEBUG 8348 --- [         task-1] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@3007840a] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@1e6d13e3]
+Hibernate: drop table if exists BATTLE_CLASS_TABLE
+Hibernate: drop table if exists hibernate_sequence
+Hibernate: drop table if exists USER_TABLE
+Hibernate: create table BATTLE_CLASS_TABLE (battle_class_id bigint not null, className varchar(255), primary key (battle_class_id)) engine=MyISAM
+Hibernate: create table hibernate_sequence (next_val bigint) engine=MyISAM
+Hibernate: insert into hibernate_sequence values ( 1 )
+Hibernate: create table USER_TABLE (id bigint not null, level integer, username varchar(255), battle_class_id bigint, primary key (id)) engine=MyISAM
+Hibernate: alter table USER_TABLE add constraint FKlmswho9m747i4nfkqyjexdp86 foreign key (battle_class_id) references BATTLE_CLASS_TABLE (battle_class_id)
+2021-03-28 15:27:15.594  INFO 8348 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-28 15:27:15.600 TRACE 8348 --- [         task-1] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@1e6d13e3] for TypeConfiguration
+2021-03-28 15:27:15.602  INFO 8348 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-28 15:27:15.830  INFO 8348 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-03-28 15:27:15.849  INFO 8348 --- [    Test worker] c.p.application.ApplicationTests         : Started ApplicationTests in 3.076 seconds (JVM running for 4.362)
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: insert into BATTLE_CLASS_TABLE (className, battle_class_id) values (?, ?)
+2021-03-28 15:27:15.992 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [전사]
+2021-03-28 15:27:15.993 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [1]
+Hibernate: insert into BATTLE_CLASS_TABLE (className, battle_class_id) values (?, ?)
+2021-03-28 15:27:15.997 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [궁수]
+2021-03-28 15:27:15.998 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [2]
+Hibernate: insert into BATTLE_CLASS_TABLE (className, battle_class_id) values (?, ?)
+2021-03-28 15:27:16.000 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [마법사]
+2021-03-28 15:27:16.000 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [BIGINT] - [3]
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: select next_val as id_val from hibernate_sequence for update
+Hibernate: update hibernate_sequence set next_val= ? where next_val=?
+Hibernate: insert into USER_TABLE (battle_class_id, level, username, id) values (?, ?, ?, ?)
+2021-03-28 15:27:16.038 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-03-28 15:27:16.039 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [5]
+2021-03-28 15:27:16.039 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [pepper]
+2021-03-28 15:27:16.039 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [4]
+Hibernate: insert into USER_TABLE (battle_class_id, level, username, id) values (?, ?, ?, ?)
+2021-03-28 15:27:16.041 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-03-28 15:27:16.041 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [10]
+2021-03-28 15:27:16.041 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [flame]
+2021-03-28 15:27:16.042 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [5]
+Hibernate: insert into USER_TABLE (battle_class_id, level, username, id) values (?, ?, ?, ?)
+2021-03-28 15:27:16.043 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [2]
+2021-03-28 15:27:16.043 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [2]
+2021-03-28 15:27:16.043 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [iksuo]
+2021-03-28 15:27:16.043 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [6]
+Hibernate: insert into USER_TABLE (battle_class_id, level, username, id) values (?, ?, ?, ?)
+2021-03-28 15:27:16.045 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [3]
+2021-03-28 15:27:16.046 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [15]
+2021-03-28 15:27:16.046 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [scott]
+2021-03-28 15:27:16.046 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [7]
+Hibernate: insert into USER_TABLE (battle_class_id, level, username, id) values (?, ?, ?, ?)
+2021-03-28 15:27:16.048 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [2]
+2021-03-28 15:27:16.048 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [25]
+2021-03-28 15:27:16.048 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [bob]
+2021-03-28 15:27:16.048 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [8]
+Hibernate: insert into USER_TABLE (battle_class_id, level, username, id) values (?, ?, ?, ?)
+2021-03-28 15:27:16.050 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [3]
+2021-03-28 15:27:16.050 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [11]
+2021-03-28 15:27:16.050 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [jane]
+2021-03-28 15:27:16.050 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [9]
+Hibernate: insert into USER_TABLE (battle_class_id, level, username, id) values (?, ?, ?, ?)
+2021-03-28 15:27:16.052 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-03-28 15:27:16.052 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [3]
+2021-03-28 15:27:16.052 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [gorden]
+2021-03-28 15:27:16.052 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [10]
+Hibernate: insert into USER_TABLE (battle_class_id, level, username, id) values (?, ?, ?, ?)
+2021-03-28 15:27:16.054 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [2]
+2021-03-28 15:27:16.054 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [9]
+2021-03-28 15:27:16.054 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [kelly]
+2021-03-28 15:27:16.055 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [11]
+Hibernate: insert into USER_TABLE (battle_class_id, level, username, id) values (?, ?, ?, ?)
+2021-03-28 15:27:16.056 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [3]
+2021-03-28 15:27:16.057 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [1]
+2021-03-28 15:27:16.057 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [mickey]
+2021-03-28 15:27:16.057 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [12]
+Hibernate: insert into USER_TABLE (battle_class_id, level, username, id) values (?, ?, ?, ?)
+2021-03-28 15:27:16.059 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1]
+2021-03-28 15:27:16.059 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [13]
+2021-03-28 15:27:16.059 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [ken]
+2021-03-28 15:27:16.059 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [13]
+Hibernate: select user0_.id as id1_1_, user0_.battle_class_id as battle_c4_1_, user0_.level as level2_1_, user0_.username as username3_1_ from USER_TABLE user0_ left outer join BATTLE_CLASS_TABLE battleclas1_ on (battleclas1_.className=? and user0_.level<=? and user0_.username=?)
+2021-03-28 15:27:16.395 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [궁수]
+2021-03-28 15:27:16.395 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [10]
+2021-03-28 15:27:16.395 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [somerandomname]
+2021-03-28 15:27:16.398 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [4]
+2021-03-28 15:27:16.400 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.401 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [5]
+2021-03-28 15:27:16.402 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [pepper]
+2021-03-28 15:27:16.402 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [5]
+2021-03-28 15:27:16.402 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.402 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [10]
+2021-03-28 15:27:16.402 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [flame]
+2021-03-28 15:27:16.402 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [6]
+2021-03-28 15:27:16.403 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.403 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [2]
+2021-03-28 15:27:16.403 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [iksuo]
+2021-03-28 15:27:16.403 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [7]
+2021-03-28 15:27:16.403 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.403 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [15]
+2021-03-28 15:27:16.403 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [scott]
+2021-03-28 15:27:16.403 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [8]
+2021-03-28 15:27:16.404 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.404 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [25]
+2021-03-28 15:27:16.404 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [bob]
+2021-03-28 15:27:16.404 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [9]
+2021-03-28 15:27:16.404 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.404 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [11]
+2021-03-28 15:27:16.404 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [jane]
+2021-03-28 15:27:16.404 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [10]
+2021-03-28 15:27:16.404 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.404 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [3]
+2021-03-28 15:27:16.405 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [gorden]
+2021-03-28 15:27:16.405 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [11]
+2021-03-28 15:27:16.405 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.405 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [9]
+2021-03-28 15:27:16.405 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [kelly]
+2021-03-28 15:27:16.405 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [12]
+2021-03-28 15:27:16.405 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.405 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [1]
+2021-03-28 15:27:16.405 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [mickey]
+2021-03-28 15:27:16.405 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [13]
+2021-03-28 15:27:16.406 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.406 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [13]
+2021-03-28 15:27:16.406 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [ken]
+Hibernate: select user0_.id as id1_1_, user0_.battle_class_id as battle_c4_1_, user0_.level as level2_1_, user0_.username as username3_1_ from USER_TABLE user0_ where user0_.level in (select max(user1_.level) from USER_TABLE user1_)
+2021-03-28 15:27:16.446 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [8]
+2021-03-28 15:27:16.446 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.447 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [25]
+2021-03-28 15:27:16.447 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [bob]
+Hibernate: select user0_.id as id1_1_, user0_.battle_class_id as battle_c4_1_, user0_.level as level2_1_, user0_.username as username3_1_ from USER_TABLE user0_
+2021-03-28 15:27:16.456 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [4]
+2021-03-28 15:27:16.456 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.457 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [5]
+2021-03-28 15:27:16.457 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [pepper]
+2021-03-28 15:27:16.457 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [5]
+2021-03-28 15:27:16.457 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.457 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [10]
+2021-03-28 15:27:16.457 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [flame]
+2021-03-28 15:27:16.457 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [6]
+2021-03-28 15:27:16.457 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.458 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [2]
+2021-03-28 15:27:16.458 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [iksuo]
+2021-03-28 15:27:16.458 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [7]
+2021-03-28 15:27:16.458 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.458 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [15]
+2021-03-28 15:27:16.459 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [scott]
+2021-03-28 15:27:16.459 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [8]
+2021-03-28 15:27:16.459 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.459 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [25]
+2021-03-28 15:27:16.459 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [bob]
+2021-03-28 15:27:16.459 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [9]
+2021-03-28 15:27:16.459 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.460 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [11]
+2021-03-28 15:27:16.460 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [jane]
+2021-03-28 15:27:16.460 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [10]
+2021-03-28 15:27:16.460 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.460 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [3]
+2021-03-28 15:27:16.460 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [gorden]
+2021-03-28 15:27:16.460 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [11]
+2021-03-28 15:27:16.460 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.461 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [9]
+2021-03-28 15:27:16.461 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [kelly]
+2021-03-28 15:27:16.461 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [12]
+2021-03-28 15:27:16.461 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.461 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [1]
+2021-03-28 15:27:16.461 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [mickey]
+2021-03-28 15:27:16.461 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [13]
+2021-03-28 15:27:16.461 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.461 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [13]
+2021-03-28 15:27:16.462 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [ken]
+Hibernate: select user0_.id as id1_1_, user0_.battle_class_id as battle_c4_1_, user0_.level as level2_1_, user0_.username as username3_1_ from USER_TABLE user0_ where user0_.level<=?
+2021-03-28 15:27:16.469 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [10]
+2021-03-28 15:27:16.471 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [4]
+2021-03-28 15:27:16.471 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.471 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [5]
+2021-03-28 15:27:16.471 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [pepper]
+2021-03-28 15:27:16.471 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [5]
+2021-03-28 15:27:16.471 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.471 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [10]
+2021-03-28 15:27:16.472 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [flame]
+2021-03-28 15:27:16.472 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [6]
+2021-03-28 15:27:16.472 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.472 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [2]
+2021-03-28 15:27:16.472 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [iksuo]
+2021-03-28 15:27:16.472 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [10]
+2021-03-28 15:27:16.472 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.472 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [3]
+2021-03-28 15:27:16.472 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [gorden]
+2021-03-28 15:27:16.473 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [11]
+2021-03-28 15:27:16.473 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.473 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [9]
+2021-03-28 15:27:16.473 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [kelly]
+2021-03-28 15:27:16.473 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [12]
+2021-03-28 15:27:16.473 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.473 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [1]
+2021-03-28 15:27:16.473 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [mickey]
+Hibernate: select user0_.id as id1_1_, user0_.battle_class_id as battle_c4_1_, user0_.level as level2_1_, user0_.username as username3_1_ from USER_TABLE user0_ inner join BATTLE_CLASS_TABLE battleclas1_ on user0_.battle_class_id=battleclas1_.battle_class_id
+2021-03-28 15:27:16.484 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [4]
+2021-03-28 15:27:16.484 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.484 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [5]
+2021-03-28 15:27:16.484 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [pepper]
+2021-03-28 15:27:16.485 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [5]
+2021-03-28 15:27:16.485 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.485 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [10]
+2021-03-28 15:27:16.485 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [flame]
+2021-03-28 15:27:16.485 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [10]
+2021-03-28 15:27:16.485 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.485 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [3]
+2021-03-28 15:27:16.485 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [gorden]
+2021-03-28 15:27:16.485 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [13]
+2021-03-28 15:27:16.486 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.486 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [13]
+2021-03-28 15:27:16.486 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [ken]
+2021-03-28 15:27:16.486 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [6]
+2021-03-28 15:27:16.486 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.486 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [2]
+2021-03-28 15:27:16.486 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [iksuo]
+2021-03-28 15:27:16.486 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [8]
+2021-03-28 15:27:16.486 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.486 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [25]
+2021-03-28 15:27:16.487 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [bob]
+2021-03-28 15:27:16.487 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [11]
+2021-03-28 15:27:16.487 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.487 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [9]
+2021-03-28 15:27:16.487 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [kelly]
+2021-03-28 15:27:16.487 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [7]
+2021-03-28 15:27:16.487 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.487 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [15]
+2021-03-28 15:27:16.487 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [scott]
+2021-03-28 15:27:16.488 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [9]
+2021-03-28 15:27:16.488 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.488 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [11]
+2021-03-28 15:27:16.488 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [jane]
+2021-03-28 15:27:16.488 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [12]
+2021-03-28 15:27:16.488 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.488 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [1]
+2021-03-28 15:27:16.488 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [mickey]
+User(id=4, username=pepper, level=5)
+User(id=5, username=flame, level=10)
+User(id=10, username=gorden, level=3)
+User(id=13, username=ken, level=13)
+User(id=6, username=iksuo, level=2)
+User(id=8, username=bob, level=25)
+User(id=11, username=kelly, level=9)
+User(id=7, username=scott, level=15)
+User(id=9, username=jane, level=11)
+User(id=12, username=mickey, level=1)
+Hibernate: select user0_.id as id1_1_, user0_.battle_class_id as battle_c4_1_, user0_.level as level2_1_, user0_.username as username3_1_ from USER_TABLE user0_ cross join BATTLE_CLASS_TABLE battleclas1_ where user0_.battle_class_id=battleclas1_.battle_class_id and battleclas1_.className=? and user0_.level<?
+2021-03-28 15:27:16.499 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [마법사]
+2021-03-28 15:27:16.499 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [10]
+2021-03-28 15:27:16.500 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [12]
+2021-03-28 15:27:16.501 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.501 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [1]
+2021-03-28 15:27:16.501 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [mickey]
+Hibernate: select user0_.id as id1_1_, user0_.battle_class_id as battle_c4_1_, user0_.level as level2_1_, user0_.username as username3_1_ from USER_TABLE user0_ cross join BATTLE_CLASS_TABLE battleclas1_ where user0_.battle_class_id=battleclas1_.battle_class_id and battleclas1_.className=? and user0_.level<?
+2021-03-28 15:27:16.503 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [마법사]
+2021-03-28 15:27:16.503 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [INTEGER] - [10]
+2021-03-28 15:27:16.505 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [12]
+2021-03-28 15:27:16.505 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.505 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [1]
+2021-03-28 15:27:16.505 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [mickey]
+Hibernate: select user0_.username as col_0_0_, user0_.level as col_1_0_, user0_.battle_class_id as col_2_0_, battleclas1_.battle_class_id as battle_c1_0_, battleclas1_.className as classnam2_0_ from USER_TABLE user0_ inner join BATTLE_CLASS_TABLE battleclas1_ on user0_.battle_class_id=battleclas1_.battle_class_id where user0_.username=?
+2021-03-28 15:27:16.528 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [bob]
+2021-03-28 15:27:16.529 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c1_0_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.530 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([classnam2_0_] : [VARCHAR]) - [궁수]
+2021-03-28 15:27:16.530 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_0_0_] : [VARCHAR]) - [bob]
+2021-03-28 15:27:16.530 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_1_0_] : [INTEGER]) - [25]
+2021-03-28 15:27:16.530 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_2_0_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.532 TRACE 8348 --- [    Test worker] org.hibernate.type.CollectionType        : Created collection wrapper: [com.peppermint100.application.entity.BattleClass.userList#2]
+Hibernate: select user0_.id as id1_1_, user0_.battle_class_id as battle_c4_1_, user0_.level as level2_1_, user0_.username as username3_1_ from USER_TABLE user0_ order by user0_.level desc
+2021-03-28 15:27:16.541 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [8]
+2021-03-28 15:27:16.542 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.542 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [25]
+2021-03-28 15:27:16.542 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [bob]
+2021-03-28 15:27:16.542 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [7]
+2021-03-28 15:27:16.542 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.542 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [15]
+2021-03-28 15:27:16.542 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [scott]
+2021-03-28 15:27:16.542 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [13]
+2021-03-28 15:27:16.542 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [13]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [ken]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [9]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [11]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [jane]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [5]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [10]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [flame]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [11]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [9]
+2021-03-28 15:27:16.543 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [kelly]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [4]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [5]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [pepper]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [10]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [3]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [gorden]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [6]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [2]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [iksuo]
+2021-03-28 15:27:16.544 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [12]
+2021-03-28 15:27:16.545 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [3]
+2021-03-28 15:27:16.545 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [1]
+2021-03-28 15:27:16.545 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [mickey]
+Hibernate: select count(user0_.id) as col_0_0_ from USER_TABLE user0_
+2021-03-28 15:27:16.552 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_0_0_] : [BIGINT]) - [10]
+Hibernate: select user0_.id as id1_1_, user0_.battle_class_id as battle_c4_1_, user0_.level as level2_1_, user0_.username as username3_1_ from USER_TABLE user0_ limit ?
+2021-03-28 15:27:16.554 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [4]
+2021-03-28 15:27:16.554 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.554 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [5]
+2021-03-28 15:27:16.554 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [pepper]
+2021-03-28 15:27:16.554 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [5]
+2021-03-28 15:27:16.555 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [1]
+2021-03-28 15:27:16.555 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [10]
+2021-03-28 15:27:16.555 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [flame]
+2021-03-28 15:27:16.555 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([id1_1_] : [BIGINT]) - [6]
+2021-03-28 15:27:16.555 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([battle_c4_1_] : [BIGINT]) - [2]
+2021-03-28 15:27:16.555 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([level2_1_] : [INTEGER]) - [2]
+2021-03-28 15:27:16.555 TRACE 8348 --- [    Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([username3_1_] : [VARCHAR]) - [iksuo]
+total = 10
+offset = 0
+limit = 3
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
